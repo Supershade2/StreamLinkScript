@@ -11,7 +11,7 @@ streamlink --player-http twitch.tv/$name
 echo "What quality do you want?"
 read quality
 echo $name >> /home/$username/Documents/channellist.txt
-streamlink --player-http twitch.tv/$name $quality --twitch-disable-ads --twitch-low-latency -o /home/$username/Videos/$name$current_date_time.mp4
+streamlink --player-http twitch.tv/$name $quality --twitch-disable-ads -o /home/$username/Videos/$name$current_date_time.mp4
 else
 filename= /home/$username/Documents/channellist.txt;
 namesnum=0
@@ -40,5 +40,5 @@ done < "$answer"
 streamlink --player-http twitch.tv/$selectedchannel
 echo "What quality do you want?"
 read quality
-streamlink --player-http twitch.tv/$selectedchannel $quality --twitch-disable-ads --twitch-low-latency -o /home/$username/Videos/$name$current_date_time.mp4
+streamlink --player-http twitch.tv/$selectedchannel $quality --twitch-disable-ads -o /home/$username/Videos/$name$current_date_time.mp4
 fi
